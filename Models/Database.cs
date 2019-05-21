@@ -1,9 +1,9 @@
 
 using System;
 using MySql.Data.MySqlClient;
-using SpaceShooter2.Models;
+using EpicodusGames.Models;
 
-namespace SpaceShooter2.Models
+namespace EpicodusGames.Models
 {
 
 public class DB

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using System.Linq;
 
-namespace SpaceShooter2.Models
+namespace EpicodusGames.Models
 {
     public class Account
     {

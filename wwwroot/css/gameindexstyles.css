@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+h3 {
+  text-align: center;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.60)), url("../img/gameindexbg.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.grid-item h1 {
+  text-align: center;
+}
+
+.grid-item p {
+  font-size: 20px;
+}
+
+.grid-item img {
+  width: 100%;
+}
+
+.imagetext {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.imagetext:hover  {
+  opacity: 0.6;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered button {
+  background-color: #FF5000;
+  border: none;
+}
+
+.centered button a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+}

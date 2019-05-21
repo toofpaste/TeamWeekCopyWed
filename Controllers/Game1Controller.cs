@@ -1,23 +1,25 @@
 
- using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using SpaceShooter2.Controllers;
-using SpaceShooter2.Models;
+using EpicodusGames.Controllers;
+using EpicodusGames.Models;
 
-namespace SpaceShooter2.Controllers
+namespace EpicodusGames.Controllers
 {
   public class Game1Controller : Controller
   {
       [HttpGet("/game1")]
-      public ActionResult Game1()
+      public ActionResult Index()
       {
           return View();
       }
 
-      [HttpGet("/play")]
+      [HttpGet("/play1")]
       public ActionResult Play()
       {
         return View();
       }
+
+
   }
 }

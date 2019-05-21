@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
-using SpaceShooter2.Models;
+using EpicodusGames.Models;
 
-namespace SpaceShooter2.Controllers
+namespace EpicodusGames.Controllers
 {
 
     public class AccountController : Controller

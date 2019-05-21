@@ -12108,11 +12108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/SpaceShooter2/SpaceShooter2.csproj",
-      "projectName": "SpaceShooter2",
-      "projectPath": "/Users/Guest/Desktop/SpaceShooter2/SpaceShooter2.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/TeamProject2/EpicodusGames.csproj",
+      "projectName": "EpicodusGames",
+      "projectPath": "/Users/Guest/Desktop/TeamProject2/EpicodusGames.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
-      "outputPath": "/Users/Guest/Desktop/SpaceShooter2/obj/",
+      "outputPath": "/Users/Guest/Desktop/TeamProject2/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
