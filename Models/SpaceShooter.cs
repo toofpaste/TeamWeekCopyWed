@@ -1,5 +1,5 @@
 using System;
-namespace SpaceShooter2.Models
+namespace EpicodusGames.Models
 {
-  
+
 }

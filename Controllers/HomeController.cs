@@ -1,10 +1,10 @@
 
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using SpaceShooter2.Controllers;
-using SpaceShooter2.Models;
+using EpicodusGames.Controllers;
+using EpicodusGames.Models;
 
-namespace SpaceShooter2.Controllers
+namespace EpicodusGames.Controllers
 {
   public class HomeController : Controller
   {
