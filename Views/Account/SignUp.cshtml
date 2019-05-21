@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Game site</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+</head>
+<body>
+  <div class="container">
+      <h5>Create Account</h5><br>
+      <form action="/sign-up" method="post">
+      @* <form action='/users/@Model.Id/clients' method='post'> *@
+        <label for="username">Username: </label><br>
+        <input id="username" name="username" type="text"><br>
+        <label for="email">Email: </label><br>
+        <input id="email" name="email" type="text"><br>
+        <label for="password">Password: </label><br>
+        <input id="password" name="password" type="text"><br>
+        <br>
+        <button type="submit" class="btn btn-dark">Create Account</button>
+      </form>
+    <div id="space">
+    </div>
+    <hr>
+    <a href="/" class="btn btn-dark">Home</a>
+    <a href="/signup"></a>
+  </div>
+</body>
+</html>
