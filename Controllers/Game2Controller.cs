@@ -8,7 +8,7 @@ namespace SpaceShooter2.Controllers
 {
   public class Game2Controller : Controller
   {
-      [HttpGet("/game1")]
+      [HttpGet("/game2")]
       public ActionResult Game1()
       {
           return View();
