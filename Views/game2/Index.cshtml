@@ -1,13 +1,13 @@
-@using EpicodusGames.Models;
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset='utf-8'>
   <title>Game Site</title>
   <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="~/css/gamestyles.css" rel="stylesheet" type="text/css" media="all" />
   <link rel="stylesheet" href="css/lightGallery.css" type="text/css" media="all" />
   <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <link href="~/css/gamestyles.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
   <div class="hero-image">
@@ -39,39 +39,70 @@
     <h3 class="title">Gallery</h3>
     <p class="subtitle">In game screenshots</p>
     <br>
-    <div class="grid-container">
-      <div class="grid-item">
-         <img src="../img/ss1.png" alt="game 2 image">
+    <div class="gallery">
+      <div class="grid-container">
+        <div class="grid-item">
+           <img src="../img/ss1.png" alt="game 1 image">
+        </div>
+        <div class="grid-item">
+           <img src="../img/ss2.png" alt="game 1 image">
+        </div>
+        <div class="grid-item">
+           <img src="../img/ss3.png" alt="game 1 image">
+        </div>
       </div>
-      <div class="grid-item">
-         <img src="../img/ss2.png" alt="game 2 image">
+      <div class="grid-container">
+        <div class="grid-item">
+           <img src="../img/ss4.png" alt="game 1 image">
+        </div>
+        <div class="grid-item">
+           <img src="../img/ss5.png" alt="game 1 image">
+        </div>
+        <div class="grid-item">
+           <img src="../img/ss6.png" alt="game 1 image">
+        </div>
       </div>
-      <div class="grid-item">
-         <img src="../img/ss3.png" alt="game 2 image">
-      </div>
-    </div>
-    <div class="grid-container">
-      <div class="grid-item">
-         <img src="../img/ss4.png" alt="game 2 image">
-      </div>
-      <div class="grid-item">
-         <img src="../img/ss5.png" alt="game 2 image">
-      </div>
-      <div class="grid-item">
-         <img src="../img/ss6.png" alt="game 2 image">
-      </div>
-    </div>
-    <div class="grid-container">
-      <div class="grid-item">
-         <img src="../img/ss7.png" alt="game 2 image">
-      </div>
-      <div class="grid-item">
-         <img src="../img/ss8.png" alt="game 2 image">
-      </div>
-      <div class="grid-item">
-         <img src="../img/ss9.png" alt="game 2 image">
+      <div class="grid-container">
+        <div class="grid-item">
+           <img src="../img/ss7.png" alt="game 1 image">
+        </div>
+        <div class="grid-item">
+           <img src="../img/ss8.png" alt="game 1 image">
+        </div>
+        <div class="grid-item">
+           <img src="../img/ss9.png" alt="game 1 image">
+        </div>
       </div>
     </div>
   </div>
+  @* This is the footer *@
+  <footer class="gameindexfooter">
+    <div class="grid-container">
+      <div class="grid-item">
+        <h4 style="text-align: left">Epicodus Games</h4>
+        <p>400 SW 6th Ave #800, Portland, OR 97204</p>
+        <p>info@epicodusgames.com</p>
+        <br>
+      </div>
+      <div class="grid-item">
+        <ul class="nav" style="text-align: center">
+          <button><a href="/games">Our Games</a></button>
+          <button><a href="/about">About Us</a></button>
+          <button><a href="/contact">Contact Us</a></button>
+        </ul>
+      </div>
+      <div class="grid-item">
+        <h4 style="text-align: right " class="connect">Connect with us:</h4>
+        <div class="rounded-social-buttons">
+          <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  @* This is the end of the footer *@
 </body>
 </html>
