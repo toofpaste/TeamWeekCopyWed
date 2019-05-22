@@ -13,7 +13,7 @@ namespace EpicodusGames.Models
       public bool ActiveAccount {get; set;}
       public int Level {get; set;}
       public int TotalXp {get; set;}
-      public int CurrentLevelXp {get; set;}
+      public float CurrentLevelXp {get; set;}
       public float LevelBar {get; set;}
 
       public Account(string accountname, string email, string password, int id = 0)
@@ -71,7 +71,7 @@ namespace EpicodusGames.Models
         int accountLevel = 0;
         int accountTotalXp = 0;
         int accountCurrentXp = 0;
-        int accountLevelBar = 0;
+        float accountLevelBar = 0;
         bool accountActivity = false;
         while(rdr.Read())
         {
@@ -82,7 +82,7 @@ namespace EpicodusGames.Models
           accountLevel = rdr.GetInt32(4);
           accountTotalXp = rdr.GetInt32(5);
           accountCurrentXp = rdr.GetInt32(6);
-          accountLevelBar = rdr.GetInt32(7);
+          accountLevelBar = rdr.GetFloat(7);
           accountActivity = rdr.GetBoolean(8);
         }
         Account newAccount = new Account(accountAccountname, accountEmail, accountPassword, accountLevel, accountTotalXp, accountCurrentXp, accountLevelBar, accountId);
@@ -109,7 +109,7 @@ namespace EpicodusGames.Models
         int accountLevel = 0;
         int accountTotalXp = 0;
         int accountCurrentXp = 0;
-        int accountLevelBar = 0;
+        float accountLevelBar = 0;
         bool accountActivity = false;
         while(rdr.Read())
         {
@@ -120,7 +120,7 @@ namespace EpicodusGames.Models
           accountLevel = rdr.GetInt32(4);
           accountTotalXp = rdr.GetInt32(5);
           accountCurrentXp = rdr.GetInt32(6);
-          accountLevelBar = rdr.GetInt32(7);
+          accountLevelBar = rdr.GetFloat(7);
           accountActivity = rdr.GetBoolean(8);
         }
         Account newAccount = new Account(accountAccountname, accountEmail, accountPassword, accountLevel, accountTotalXp, accountCurrentXp, accountLevelBar, accountId);
@@ -177,7 +177,7 @@ namespace EpicodusGames.Models
         int accountLevel = 0;
         int accountTotalXp = 0;
         int accountCurrentXp = 0;
-        int accountLevelBar = 0;
+        float accountLevelBar = 0;
         bool accountActivity = false;
         while(rdr.Read())
         {
@@ -188,7 +188,7 @@ namespace EpicodusGames.Models
           accountLevel = rdr.GetInt32(4);
           accountTotalXp = rdr.GetInt32(5);
           accountCurrentXp = rdr.GetInt32(6);
-          accountLevelBar = rdr.GetInt32(7);
+          accountLevelBar = rdr.GetFloat(7);
           accountActivity = rdr.GetBoolean(8);
         }
         Account newAccount = new Account(accountAccountname, accountEmail, accountPassword, accountLevel, accountTotalXp, accountCurrentXp, accountLevelBar, accountId);

@@ -22,7 +22,7 @@ namespace EpicodusGames.Controllers
         Account accountLogin = Account.FindAccount(email, password);
         accountLogin.ActiveAccount = true;
         if(accountLogin.Email != "" && accountLogin.Password != "")
-          return RedirectToAction("Games", accountLogin);
+          return RedirectToAction("Games", "Home", accountLogin);
         return RedirectToAction("SignIn");
       }
 
