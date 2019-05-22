@@ -25,5 +25,11 @@ namespace EpicodusGames.Controllers
     {
       return View();
     }
+
+    [HttpGet("/contact")]
+    public ActionResult Contact()
+    {
+        return View();
+    }
   }
 }

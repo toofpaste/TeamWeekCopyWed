@@ -1,0 +1,196 @@
+body, html {
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+p {
+  font-size: 20px;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.60)), url("../img/gameonebg.png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 80px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.grid-item {
+  padding: 5px;
+}
+
+.grid-item h1 {
+  text-align: center;
+}
+
+.grid-item p {
+  font-size: 20px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.imagetext {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.imagetext:hover  {
+  opacity: 0.6;
+}
+
+.title {
+	font-size: 2.5em;
+  font-weight: bold;
+  color: #212121;
+	letter-spacing: 3px;
+	text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {
+	color:#ff5000;
+	text-transform:uppercase;
+	letter-spacing:8px;
+	text-align: center;
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.hero-text button{
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase!important;
+    letter-spacing: 2px;
+    color: #FF5000;
+    cursor: hand;
+    text-align: center;
+    text-transform: capitalize;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden!important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: transparent!important;
+    z-index:10;
+}
+
+.hero-text button:hover{
+    border: none;
+	  color: #FF5000;
+}
+.hero-text button::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #FF5000;
+    position: absolute;
+	  -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+	   box-shadow:2px 0px 14px rgba(0,0,0,.6);
+  }
+
+.hero-text button::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: white;
+    position: absolute;
+	  -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+    -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    transition: all .8s cubic-bezier(.2,.95,.57,.99);
+    box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+}
+.hero-text button:hover::before {
+	opacity:1;
+	width: 116%;
+
+}
+.hero-text button:hover::after {
+	opacity:1;
+	width: 120%;
+}
+
+.hero-text button a{
+  color: white;
+}
+
+.hero-text button a:hover {
+  text-decoration: none;
+  color: white;
+}

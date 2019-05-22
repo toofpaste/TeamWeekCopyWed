@@ -31,3 +31,4 @@
 /Users/Guest/Desktop/TeamProject2/obj/Debug/netcoreapp2.2/EpicodusGames.dll
 /Users/Guest/Desktop/TeamProject2/obj/Debug/netcoreapp2.2/EpicodusGames.pdb
 /Users/Guest/Desktop/TeamProject2/obj/Debug/netcoreapp2.2/EpicodusGames.csproj.CopyComplete
+/Users/Guest/Desktop/TeamProject2/obj/Debug/netcoreapp2.2/Razor/Views/Home/Contact.g.cshtml.cs
