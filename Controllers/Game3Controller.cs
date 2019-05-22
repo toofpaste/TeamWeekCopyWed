@@ -16,7 +16,7 @@ namespace EpicodusGames.Controllers
     // [HttpGet("/play3")]
     // public ActionResult Play()
     // {
-    //   Account activeAccount = FindActiveAccount();
+    //   Account activeAccount = Account.FindActiveAccount();
     //   activeAccount.AddXp();
     //   return View();
     // }

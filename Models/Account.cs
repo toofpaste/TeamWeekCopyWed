@@ -24,7 +24,7 @@ namespace EpicodusGames.Models
         Id = id;
         Level = 1;
         TotalXp = 0;
-        currentLevelXp = 0;
+        CurrentLevelXp = 0;
         LevelBar = 0;
         ActiveAccount = false;
       }
@@ -55,7 +55,7 @@ namespace EpicodusGames.Models
         MySqlConnection conn = DB.Connection();
         conn.Open();
         MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-        cmd.CommandText = @"INSERT INTO account (id, email, password, account_name, level, total_xp, current_level_xp, level_bar) VALUES ('"+Id"', '"+Email+"', '"+Password+"', '"+Accountname+"', '"+Level+"', '"TotalXp"', '"+CurrentLevelXp"', '"+LevelBar+"');";
+        cmd.CommandText = @"INSERT INTO account (id, email, password, account_name, level, total_xp, current_level_xp, level_bar) VALUES ('"+Id+"', '"+Email+"', '"+Password+"', '"+Accountname+"', '"+Level+"', '"+TotalXp+"', '"+CurrentLevelXp+"', '"+LevelBar+"');";
         cmd.ExecuteNonQuery();
         Id = (int) cmd.LastInsertedId;
         conn.Close();
@@ -76,6 +76,11 @@ namespace EpicodusGames.Models
         string accountAccountname = "";
         string accountEmail = "";
         string accountPassword = "";
+        int accountLevel = 0;
+        int accountTotalXp = 0;
+        int accountCurrentXp = 0;
+        int accountLevelBar = 0;
+        bool accountActivity = false;
         while(rdr.Read())
         {
           accountId = rdr.GetInt32(0);
@@ -84,8 +89,9 @@ namespace EpicodusGames.Models
           accountPassword = rdr.GetString(3);
           accountLevel = rdr.GetInt32(4);
           accountTotalXp = rdr.GetInt32(5);
-          accountCurrentLevelXp = rdr.GetInt32(5);
-          accountLevelBar = rdr.GetInt32(6);
+          accountCurrentXp = rdr.GetInt32(6);
+          accountLevelBar = rdr.GetInt32(7);
+          accountActivity = rdr.GetBoolean(8);
         }
         Account newAccount = new Account(accountAccountname, accountEmail, accountPassword, accountLevel, accountTotalXp, accountCurrentXp, accountLevelBar, accountId);
         conn.Close();
@@ -108,6 +114,11 @@ namespace EpicodusGames.Models
         string accountAccountname = "";
         string accountEmail = "";
         string accountPassword = "";
+        int accountLevel = 0;
+        int accountTotalXp = 0;
+        int accountCurrentXp = 0;
+        int accountLevelBar = 0;
+        bool accountActivity = false;
         while(rdr.Read())
         {
           accountId = rdr.GetInt32(0);
@@ -116,9 +127,9 @@ namespace EpicodusGames.Models
           accountPassword = rdr.GetString(3);
           accountLevel = rdr.GetInt32(4);
           accountTotalXp = rdr.GetInt32(5);
-          accountCurrentLevelXp = rdr.GetInt32(5);
-          accountLevelBar = rdr.GetInt32(6);
-
+          accountCurrentXp = rdr.GetInt32(6);
+          accountLevelBar = rdr.GetInt32(7);
+          accountActivity = rdr.GetBoolean(8);
         }
         Account newAccount = new Account(accountAccountname, accountEmail, accountPassword, accountLevel, accountTotalXp, accountCurrentXp, accountLevelBar, accountId);
         conn.Close();
@@ -165,23 +176,28 @@ namespace EpicodusGames.Models
         MySqlConnection conn = DB.Connection();
         conn.Open();
         var cmd = conn.CreateCommand() as MySqlCommand;
-        cmd.CommandText = @"SELECT * FROM account IF active_account = 'true';";
+        cmd.CommandText = @"SELECT * FROM account WHERE active_account = 'true';";
         var rdr = cmd.ExecuteReader() as MySqlDataReader;
         int accountId = 0;
         string accountAccountname = "";
         string accountEmail = "";
         string accountPassword = "";
+        int accountLevel = 0;
+        int accountTotalXp = 0;
+        int accountCurrentXp = 0;
+        int accountLevelBar = 0;
+        bool accountActivity = false;
         while(rdr.Read())
         {
           accountId = rdr.GetInt32(0);
           accountAccountname = rdr.GetString(1);
           accountEmail = rdr.GetString(2);
           accountPassword = rdr.GetString(3);
-          accountActivity = rdr.GetBool(4);
           accountLevel = rdr.GetInt32(4);
           accountTotalXp = rdr.GetInt32(5);
-          accountCurrentLevelXp = rdr.GetInt32(5);
-          accountLevelBar = rdr.GetInt32(6);
+          accountCurrentXp = rdr.GetInt32(6);
+          accountLevelBar = rdr.GetInt32(7);
+          accountActivity = rdr.GetBoolean(8);
         }
         Account newAccount = new Account(accountAccountname, accountEmail, accountPassword, accountLevel, accountTotalXp, accountCurrentXp, accountLevelBar, accountId);
         conn.Close();
@@ -216,58 +232,65 @@ namespace EpicodusGames.Models
 
       public void CheckLevelUp()
       {
+        int xpUntilNextLevel = 0;
         if(Level == 20)
         {
-          int xpUntilNextLevel = 5000;
-          if(currentLevelXp == xpUntilNextLevel)
+          xpUntilNextLevel = 5000;
+          if(CurrentLevelXp == xpUntilNextLevel)
           {
             Level++;
-            currentLevelXp = 0;
+            CurrentLevelXp = 0;
           }
           // Max acc level
         }
         else if(Level >= 15 ) {
-          int xpUntilNextLevel = 4000;
-          if(currentLevelXp == xpUntilNextLevel)
+          xpUntilNextLevel = 4000;
+          if(CurrentLevelXp == xpUntilNextLevel)
           {
             Level++;
-            currentLevelXp = 0;
+            CurrentLevelXp = 0;
           }
         }
         else if(Level >= 10)
         {
-          int xpUntilNextLevel = 3000;
-          if(currentLevelXp == xpUntilNextLevel)
+          xpUntilNextLevel = 3000;
+          if(CurrentLevelXp == xpUntilNextLevel)
           {
             Level++;
-            currentLevelXp = 0;
+            CurrentLevelXp = 0;
           }
         }
         else if(Level >= 5)
         {
-          int xpUntilNextLevel = 2000;
-          if(currentLevelXp == xpUntilNextLevel)
+          xpUntilNextLevel = 2000;
+          if(CurrentLevelXp == xpUntilNextLevel)
           {
             Level++;
-            currentLevelXp = 0;
+            CurrentLevelXp = 0;
           }
         }
         else if(Level >= 5)
         {
-          int xpUntilNextLevel = 1000;
-          if(currentLevelXp == xpUntilNextLevel)
+          xpUntilNextLevel = 1000;
+          if(CurrentLevelXp == xpUntilNextLevel)
           {
             Level++;
-            currentLevelXp = 0;
+            CurrentLevelXp = 0;
           }
         }
-        LevelBar = xpUntilNextLevel / currentLevelXp;
+        if(CurrentLevelXp > 0)
+        {
+          LevelBar = xpUntilNextLevel / CurrentLevelXp;
+        }
+        else {
+          LevelBar = 0;
+        }
       }
 
       public void AddXp()
       {
         TotalXp += 500;
-        ChekLevelUp();
+        CheckLevelUp();
       }
 
       // forgot password
