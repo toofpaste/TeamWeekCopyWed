@@ -1,33 +1,34 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <title>Game Site</title>
-  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='~/css/styles.css' type="text/css">
-</head>
-<body>
-  <div class="container">
-    <div class="jumbotron">
-    <h1>Game Site</h1>
+  <head>
+    <meta charset='utf-8'>
+    <title>Game Site</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/homeindexstyles.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/account.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h2>Please login:</h2><br>
+        <form action="sign-in" method="post">
+          @* <form action='/users/@Model.Id/clients' method='post'> *@
+          <label for="email">Email: </label><br>
+          <input id="email" name="email" type="text"><br>
+          <label for="password">Password: </label><br>
+          <input id="password" name="password" type="password"><br>
+          <br>
+          <button type="submit" class="btn btn-dark">Login</button>
+        </form>
+        <div id="space">
+        </div>
+        <hr>
+        <button><a href="/sign-up" class="btn btn-dark">Create Account</a></button>
+        <button><a href="/" class="btn btn-dark">Home</a></button>
+      </div>
     </div>
-    <h5>Please login:</h5><br>
-      <form action="sign-in" method="post">
-      @* <form action='/users/@Model.Id/clients' method='post'> *@
-        <label for="email">Email: </label><br>
-        <input id="email" name="email" type="text"><br>
-        <label for="password">Password: </label><br>
-        <input id="password" name="password" type="text"><br>
-        <br>
-        <button type="submit" class="btn btn-dark">Login</button>
-        <a href="/sign-up" class="btn btn-dark">Create Account</a>
-      </form>
-    <div id="space">
-    </div>
-    <hr>
-    <a href="/" class="btn btn-dark">Home</a>
-    <a href="/signup"></a>
-  </div>
-</body>
+  </body>
 </html>

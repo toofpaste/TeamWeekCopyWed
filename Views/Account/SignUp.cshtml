@@ -5,9 +5,13 @@
   <title>Game site</title>
   <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
   <link rel='stylesheet' href='~/css/styles.css' type="text/css">
+  <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="~/css/homeindexstyles.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="~/css/account.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-  <div class="container">
+  <div class="hero-image">
+    <div class="hero-text">
       <h5>Create Account</h5><br>
       <form action="/sign-up" method="post">
       @* <form action='/users/@Model.Id/clients' method='post'> *@
@@ -16,15 +20,16 @@
         <label for="email">Email: </label><br>
         <input id="email" name="email" type="text"><br>
         <label for="password">Password: </label><br>
-        <input id="password" name="password" type="text"><br>
+        <input id="password" name="password" type="password"><br>
         <br>
         <button type="submit" class="btn btn-dark">Create Account</button>
       </form>
-    <div id="space">
-    </div>
+      <div id="space">
+      </div>
     <hr>
-    <a href="/" class="btn btn-dark">Home</a>
-    <a href="/signup"></a>
+    <button><a href="/" class="btn btn-dark">Home</a></button>
+    <button><a href="/sign-in" class="btn btn-dark">Sign In</a></button>
+    </div>
   </div>
 </body>
 </html>

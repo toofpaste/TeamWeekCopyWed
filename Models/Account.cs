@@ -42,20 +42,12 @@ namespace EpicodusGames.Models
         ActiveAccount = false;
       }
 
-      //cookies constructor
-      public Account(string eCookie, string pCookie, string uCookie)
-      {
-        Email = eCookie;
-        Password = pCookie;
-        Accountname = uCookie;
-      }
-
       public void Save()
       {
         MySqlConnection conn = DB.Connection();
         conn.Open();
         MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-        cmd.CommandText = @"INSERT INTO account (id, email, password, account_name, level, total_xp, current_level_xp, level_bar) VALUES ('"+Id+"', '"+Email+"', '"+Password+"', '"+Accountname+"', '"+Level+"', '"+TotalXp+"', '"+CurrentLevelXp+"', '"+LevelBar+"');";
+        cmd.CommandText = @"INSERT INTO account (id, account_name, email, password, level, total_xp, current_level_xp, level_bar) VALUES ('"+Id+"', '"+Accountname+"', '"+Email+"', '"+Password+"', '"+Level+"', '"+TotalXp+"', '"+CurrentLevelXp+"', '"+LevelBar+"');";
         cmd.ExecuteNonQuery();
         Id = (int) cmd.LastInsertedId;
         conn.Close();
@@ -216,7 +208,7 @@ namespace EpicodusGames.Models
         MySqlConnection conn = DB.Connection();
         conn.Open();
         var cmd = conn.CreateCommand() as MySqlCommand;
-        cmd.CommandText = @"SELECT * FROM account WHERE accountname = '"+Accountname+"' OR email ='"+Email+"';";
+        cmd.CommandText = @"SELECT * FROM account WHERE account_name = '"+Accountname+"' OR email ='"+Email+"';";
         var rdr = cmd.ExecuteReader() as MySqlDataReader;
         while(rdr.Read())
         {
@@ -243,7 +235,8 @@ namespace EpicodusGames.Models
           }
           // Max acc level
         }
-        else if(Level >= 15 ) {
+        else if(Level >= 15 )
+        {
           xpUntilNextLevel = 4000;
           if(CurrentLevelXp == xpUntilNextLevel)
           {
