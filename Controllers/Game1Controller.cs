@@ -8,18 +8,18 @@ namespace EpicodusGames.Controllers
 {
   public class Game1Controller : Controller
   {
-      [HttpGet("/game1")]
-      public ActionResult Index()
-      {
-          return View();
-      }
+    [HttpGet("/game1")]
+    public ActionResult Index()
+    {
+      return View();
+    }
 
-      [HttpGet("/play1")]
-      public ActionResult Play()
-      {
-        return View();
-      }
-
-
+    [HttpGet("/play1")]
+    public ActionResult Play()
+    {
+      Account activeAccount = Account.FindActiveAccount();
+      activeAccount.AddXp();
+      return View();
+    }
   }
 }
