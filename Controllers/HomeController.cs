@@ -11,19 +11,19 @@ namespace EpicodusGames.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-        return View();
+      return View();
     }
 
     [HttpGet("/show")]
     public ActionResult Show()
     {
-      return View();
+    return View();
     }
 
     [HttpGet("/games")]
     public ActionResult Games()
     {
-        return View();
+      return View();
     }
   }
 }

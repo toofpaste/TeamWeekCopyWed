@@ -7,17 +7,19 @@ namespace EpicodusGames.Controllers
 {
   public class Game3Controller : Controller
   {
-      // [HttpGet("/game3")]
-      // public ActionResult Index()
-      // {
-      //     return View();
-      // }
-      //
-      // [HttpGet("/play3")]
-      // public ActionResult Play()
-      // {
-      //   return View();
-      // }
+    // [HttpGet("/game3")]
+    // public ActionResult Index()
+    // {
+    //   return View();
+    // }
+    //
+    // [HttpGet("/play3")]
+    // public ActionResult Play()
+    // {
+    //   Account activeAccount = FindActiveAccount();
+    //   activeAccount.AddXp();
+    //   return View();
+    // }
 
 
   }
